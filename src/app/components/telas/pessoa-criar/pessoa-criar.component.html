@@ -1,0 +1,19 @@
+<div>
+    <h1>Novo cadastro</h1>
+    <form>
+            <input  placeholder="Nome"[(ngModel)]="pessoa.nome" name="nome">
+       
+            <input  placeholder="CPF"[(ngModel)]="pessoa.cpf" name="cpf">
+      
+            <input  placeholder="E-mail"[(ngModel)]="pessoa.email" name="email">
+       
+            <input  placeholder="Telefone"[(ngModel)]="pessoa.telefone" name="telefone">
+       
+    </form>
+    <button  (click)="cadastrarPessoa()" color="primary">
+        Cadastrar Pessoa
+    </button>
+    <button  (click)="voltar()">
+        Voltar
+    </button>
+</div>

@@ -1,0 +1,21 @@
+<a  routerLink="/pessoa-criar"><i class="fa fa-user" aria-hidden="true"></i>Cadastrar nova pessoa</a>  <h1>Pessoas cadastradas</h1>
+
+<table  *ngIf="pessoa">
+    <thead>
+        <td>ID</td>
+        <td>NOME</td>
+        <td>CPF</td>
+        <td>EMAIL</td>
+        <td>TELEFONE</td>
+        <td>AÇÃO</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of pessoa">
+            <td>{{p.id}}</td>
+            <td>{{p.nome}}</td>
+            <td>{{p.cpf}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.telefone}}</td>
+            <td><button (click)="deletar(p.id)"><i class="fa-solid fa-trash"></i></button></td>
+    </tbody>
+</table>
