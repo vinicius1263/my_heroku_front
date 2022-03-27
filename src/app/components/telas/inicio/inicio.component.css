@@ -1,0 +1,125 @@
+/*# importando as fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Mulish:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&display=swap');
+
+/* importando o serviço de icones*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+:root{
+    --font-primary:"Baloo Da 2", serif;
+    --font-secundary:"Josefin Slab", serif;
+    --font-action:"Mulish", serif;
+}
+
+
+header{
+    width: 218.5vh;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color:rgb(0, 0, 0,0.8);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    animation: zoom 25s;
+}
+
+@keyframes zoom{
+
+    0%{/*como inicia*/
+        transform: scale(1.3);
+    }
+    100%{/*como termina*/
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    top: 25%;
+    left: 12%;
+}
+
+.banner h1{
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: var(--font-primary);
+    font-weight: 200;
+    text-shadow: .3rem .2rem 2px rgb(0, 0, 0,0.4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    animation: moveBanner 1s ;
+}
+
+.banner p{
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: var(--font-secundary);
+    font-weight: 200;
+    text-shadow: .3rem .2rem 2px rgb(0, 0, 0,0.4);
+    margin-bottom: 2rem;
+    animation: moveBanner 2s ;
+}
+
+
+
+.banner a {
+    font-family: var(--font-action);
+    background-color: royalblue;
+   background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+   margin: 1rem;
+   padding: 1rem 3rem;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: #d1dfe0;            
+   box-shadow:.3rem .2rem 2px rgb(0, 0, 0,0.4);
+   border-radius: 5px;
+   display: block;
+   letter-spacing: .1rem;
+   cursor: pointer;
+   animation: moveBanner 3s ;
+   width: 35vh;
+ }
+
+ .banner a:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ @keyframes moveBanner{
+
+    0%{/*como inicia*/
+        transform: translateY(10rem) rotateY(-40deg);
+        opacity: 0;
+    }
+    100%{/*como termina*/
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
